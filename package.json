@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animated": "^0.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-inline-transition-group": "^2.1.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.77.1"
+    "react-transition-group": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "^4.13.1",

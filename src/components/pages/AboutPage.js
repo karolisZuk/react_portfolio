@@ -1,14 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import HeaderComponent from '../Header/HeaderComponent';
+import FooterComponent from '../FooterComponent';
 
-const AboutPage = () => (
-<div>
-<h1>About Page</h1>
-<Link to = "/">PROJECTS</Link>
-<Link to = "/about">ABOUT</Link>
-<Link to = "/notes">NOTES</Link>
-<Link to = "/contact">CONTACT</Link>
-</div>
-);
+const style = {
+        
+}
+
+
+class AboutPage extends React.Component {
+    constructor(props){
+        super(props);
+        this.title = 'about';
+    }
+
+    render(){
+
+        return (
+            <div>
+            <HeaderComponent title={this.title} />
+            
+            <div>
+            <h2>About Page</h2>
+            </div>
+            <FooterComponent />
+            </div>
+        );
+    }
+
+}
 
 export default AboutPage;
