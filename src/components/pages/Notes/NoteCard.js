@@ -3,35 +3,44 @@ import Cta from '../../Cta';
 
     const style = {
             card:{
-                backgroundColor: '#000a12',
-                minHeight: 450,
-                minWidth: 450,
-                display: 'flex',
-                padding:'10px',
-                paddingTop: '130px',
-                paddingBottom: '135px'
+                marginBottom:'40px',
+                backgroundColor:'#4f5b62',
+                maxWidth: '96%',
+                height:'500px',
+                position:'relative',
+                breakInside: 'avoid',
+                padding: '5px'
             },
             cardContent: {
-                transition: 'all 0.2s ease',
-                borderRadius:'5px',
-                backgroundColor: '#4f5b62',
-                minHeight: 450,
-                minWidth:'100%',
-                position: 'relative'
+                margin:'20px',
+                color:'white'
             },
             date:{
-                float:'right',
-                margin:'20px',
-                fontSize:'1.5em'
+                fontSize:'1em',
+                fontFamily: 'Open Sans, sans-serif'
+            },
+            title:{
+                marginTop:'30px',
+                marginBottom:'30px',
+                textTransform:'uppercase',
+                fontFamily: 'PT Sans Narrow, sans-serif',
+                letterSpacing: '3px',
+                fontSize:'2em'
+            },
+            description:{
+                marginRight:'20px',
+                fontFamily: 'Open Sans, sans-serif',
+                fontSize:'1em',
+                letterSpacing: '2px'
             }
         }
 
-class NoteCard extends React.Component {
+
+
+        class NoteCard extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            scale:1
-        }
+        this.title='note card';
     }
 
     render(){
@@ -50,13 +59,12 @@ class NoteCard extends React.Component {
         }
 
         return (
-                    <div style={style.card}>
+                    <div style={style.card} >
                         <div style={{...style.cardContent}} >
                             <h4 style={style.date}> {this.props.date} </h4>
                             <h2 style={style.title}> {this.props.title} </h2>
                             <p style={style.description}>- {this.props.description} </p>
-                            
-                            <Cta text={'read more >'} link={linkTo} />
+                            <Cta text={'read more >'} link={linkTo} color='white'/>
                         </div>
                     </div>
         );

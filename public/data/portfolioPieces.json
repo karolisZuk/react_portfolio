@@ -1,0 +1,180 @@
+{
+    "projects":[
+    {
+    "projectType":"branding-web", 
+    "projectTitle":"BDSM Architecture",
+    "projectDescription":"naughty/nice you decide. Full branding service for a startup",
+
+    "projectContext":
+    "     Client - furniture manufacturer, with a lot of ideas for furniture design. Manufacturing these pieces of art is very expensive, manufacturing and photographing everything is sub-optimal to say the least. On top of that, you need a unique branding strategy, to outrun your competitors.",
+    "projectProcess":
+    "     Work started with branding strategy. First, to differentiate from, less than stylish, crowd of competitors we had to choose our unique style and values. Minimal, clean design, with colour pallet representing quality was best way to go. Clean type logo was created (after multiple iterations). When brand colors, logo and site mock-ups were set the renders for furniture were created. From sketches to renders and blueprints for production. The final renders were created with Cinema4D, great software for designers and visual artists.  The final piece of the project was the website. Running on Wordpress with Woocommerce, it was easy to develop and maintain. The main challenge with the site - SEO part. While on production we had to solve head-spinning puzzles on how to not get flagged as site with bad content.",
+    "projectResult":
+    "     Branding strategy, design solutions, product 3D renders, and a clean, fully executed e-commerce website to promote the produce. One of the most interesting and satisfying 'full package' projects we worked on.",
+    "projectWork":[
+        "1. Furniture design and 3D visuals for a catalogue. It is way cheaper to design a catalogue with 3D models than to manufacture every product.",
+        "2. Visual guidance for branding strategy.",
+        "3. Website design based on branding strategy. Clean, professional looks, to separate the brand from the crowd.",
+        "4. Website programming front-to-back, SEO optimisation and traffic monitoring."
+    ],
+    "projectLink":"branding-visual-3d-furniture-design-website",
+    "linkToProject":"bdsmarchitecture.com",
+    "color":"black",
+    "cardImageUrl":"data/img/card-bdsm-architecture.jpg",
+    "projectImages":["data/img/b-architecture-case1.jpg","data/img/b-architecture-case3.jpg","data/img/b-architecture-case4.jpg"]
+    },{
+
+
+    "projectType":"branding-web", 
+    "projectTitle":"Baltas Kadras Webpage",
+    "projectDescription":"Sexy commercial photography is best way to sell any product. Branding helps too",
+
+    "projectContext":
+    "     A professional photographer struggling to attract big commercial photography contracts contacted us for help. Our client had old, working portfolio website, with less than professional looking design. On top of that, there was no identity, branding, or character to shine  against competition. Our client was not doing justice to the pixel-perfect professional photography he was making.",
+    "projectProcess":
+    "    As, with every project, the work started as technical specifications for website functionality and design values. We reviewed old website of our client, and pinpointed the potential bottlenecks for lead generation. Based on results we created the mock-up for the new website.  Finally we started the development. The site itself is running Wordpress, with design tailored for A professional photographer and SEO targeted to lead generation.",
+    "projectResult":
+    "     Professional wordpress website generating massive income. Search engine ranking for our client had drastically increased, generating more clients and profit. Good brand positioning changed the scope of our clients projects.",
+    "projectWork":[
+    "1. Webpage design face lift. Pleasing minimal and modern design - perfect for attracting potential customers.",
+    "2. Branding strategy and customer behavior study, resulting in much bigger project sales. Double the customers and massive revenue boost, because of project scale increase.",
+    "3. Successful internal SEO optimization, skyrocketed the page to the top ranks in a competitive search engine landscape resulting in huge web traffic boost."
+    ],
+    "projectLink":"baltas-kadras-webpage",
+    "linkToProject":"baltaskadras.lt",
+    "color":"black",
+    "cardImageUrl":"data/img/card-baltas-kadras.jpg",
+    "projectImages":["data/img/baltas-case1.jpg", "data/img/baltas-case2.jpg"]
+    },{
+
+
+    "projectType":"motion", 
+    "projectTitle":"Dream X projection mapping",
+    "projectDescription":"A very satisfactory mix of high-tech and motion design",
+    "projectContext":
+    "     Client - one of the biggest performance art teams in world. Long time friends of ours. This was a proposal we could not resist, one of the kind mix of performance art and technology. Our team had daunting, yet gratifying task, of creating motion graphics and VFX for projection mapping. The pressure of coordinating choreography, animations and less-than-stellar deadlines fell on our shoulders.",
+    "projectProcess":
+    "     First of, the planning phase - we got all the detail for the show, we reviewed the competitors, the technical and software specs for the project. After the initial step, we got down to storyboards, also we did sketches for the animation scenes, to select the colours and the mood. After that, the work had started. On top of raw footage of dancers we build the effects, the transitions and all other motion graphics. After running back and forth with adjustments with the client, we rendered the final composition for the project.",
+    "projectResult":
+    "     5 minutes of animation to be used in illusion show, as projection mapping. A big library of effects, to be easily reused with different shows and settings. A commercial proposal design and a big know how into projection mapping and visual effects. This was a great learning experience.",
+
+    "projectWork":[
+    "1. Study of other teams in the market, their strengths and weaknesses.",
+    "2. Created art direction and style, working closely with choreographers and art directors.",
+    "3. Created a library of reusable VFX effects.",
+    "4. Created projection-mapping ready animations for dancers to work with.",
+    "5. Created design guidelines for commercial proposal and styling for the show."
+    ],
+
+    "projectLink":"motion-projection-mapping-show-sapnasx",
+    "linkToProject":"viduramziai.lt/en/illusion-show",
+    "color":"white",
+    "cardImageUrl":"data/img/card-dream-x.jpg",
+    "projectImages":[
+        "data/img/sapnasCase1.jpg",
+        "data/img/sapnasCase2.jpg"]
+    },{
+
+
+
+        "projectType":"web", 
+        "projectTitle":"Antresoles.lt webpage",
+        "projectDescription":"Webpage redesign, doubling the generated leads",
+        "projectContext":
+        "     Client working in loft building industry, struggling to get noticed in his market. Our job was a website redesign and SEO optimization (to put it blunt - generating more customers and doing more sales). Having sales numbers in mind we rolled our sleeves and got to work.",
+        "projectProcess":
+        "The work started with analysis of the competitors and the clients. While doing this, we pinpointed the potential sales bottlenecks. After that, the only thing left to do - building the new website, based on previous data. ",
+        "projectResult":
+          "     New client and up to standard website. Good SEO strategy, which resulted in doubling of sales.",
+        "projectWork":[
+        "1. Study of potencial customers, which led to design guidelines.",
+        "2. Smart search engine optimisation leading in more site visits, which in term led to more sales",
+        "1. Furniture design and 3D visuals for a catalogue. It is way cheaper to design a catalogue with 3D models than to manufacture every product."
+    ],   
+        "projectLink":"antresoles-webpage",
+        "linkToProject":"antresoles.lt",
+        "color":"black",
+        "cardImageUrl":"data/img/card-antresoles.jpg",
+        "projectImages":[
+            "data/img/antresoles-case1.jpg",
+            "data/img/antresoles-case2.jpg"]
+    },{
+
+
+        "projectType":"motion", 
+        "projectTitle":"Meaco 3D video presentation",
+        "projectDescription":"3D modeling and video commercials",
+        "projectContext":
+            "     Working as a subcontractor, our job was to prepare visual communication for air dehumidification produce. From concept to final renderings, and translations for the videos.",
+        "projectProcess":
+            "     Upon deciding, what style of visualization to use (based of aesthetics of the product), we started the modeling process. Using 3D max for whole modeling process, we used VRay to properly light and render the model. The final result was cut and color-graded in Adobe Premiere pro.",
+        "projectResult":
+            "     Representational CG movie, to be used in e-commerce shops and commercials.",
+        "projectWork":[
+            "1. Study of visual aesthetics and brand values.",
+            "2. 3D modeling, lighting and rendering in Autodesk 3D max.",
+            "3. Final video compositions and translations in Adobe Premiere pro."],
+        "projectLink":"meaco-video-presentation-3d-modeling-vray",
+        "linkToProject":"www.youtube.com/watch?v=i1KDzhNZSE0&",
+        "color":"black",
+        "cardImageUrl":"data/img/card-meaco.jpg",
+        "projectImages":["data/img/meacoCase1.jpg","data/img/meacoCase2.jpg"]
+    },{
+
+
+        "projectType":"design", 
+        "projectTitle":"Proposal design for show business",
+        "projectDescription":"Commercial proposal and google ads design",
+        "projectContext":
+          "     Client - performance art and event organizing company, working in the field for more than 10 years. Over the years the company had bad branding practices, no unified brand style.",
+        "projectProcess":
+          "     The design process started from basic sketches, and looking for the best direction to go with the project. After the initial step we set brand guidelines, fresh logo design, and a vision, to how the brand design should look. Keeping in mind how our design will be consumed (layouts, mobile sizes, user-friendly colors), we created the final design", 
+        "projectResult":
+          "     A stylishly well designed commercial proposal and catalogue. Also well designed supporting google ads banners.",
+        "projectWork":[
+          "1. Study of brand guidelines, brand positioning and values.",
+          "2. Design work for commercial proposal using Adobe inDesign.", 
+          "3. Designing the google ads banners for different screen sizes."],
+        "projectLink":"vp-commercial-proposal-design",
+        "linkToProject":"viduramziai.lt",
+        "color":"white",
+        "cardImageUrl":"./data/img/card-vp-pasiulymas.jpg",
+        "projectImages":["./data/img/vpCase1.jpg","./data/img/vpCase2.jpg"]    
+    },{
+        "projectType":"3D", 
+        "projectTitle":"Ceramics visuals 3D renders",
+        "projectDescription":"Electrolux conference  gift visuals",
+        "projectContext":
+            "     The project - photorealistic visuals for marketing conference. The conference was organised by Elektrolux and I was approached by a subcontractor, to help out with visuals, for gift ideas.",
+        "projectProcess":
+            "     Building upon client requests, as with all projects, the work started with simple pen and paper sketches. When settled, on the final looks, the objects were modeled with Autodesk 3D max. The final renders and lighting were made with VRay.",
+        "projectResult":
+            "     Photorealistic 3D renders of ceramic items.",
+        "projectWork":[
+        "1. Modeling and geometry in Autodesk 3D max.",
+        "2. Lighting, materials and rendering using vRay."],
+        "projectLink":"electrolux-conference-present-3d-visuals-made-with-3dmax-vray",
+        "color":"black",
+        "cardImageUrl":"data/img/card-electrolux.jpg"
+    },{
+        "projectType":"motion", 
+        "projectTitle":"Odisėja 72 challenge",
+        "projectDescription":"72 hour movie making challenge",
+
+        "projectContext":
+            "     While studying in university, I had a possibility to join a team of talented students and industry professionals for a huge task - creation of short movie during 72 hours. The project had to fullfill few requirements: movie duration - no more than 5 minutes, movie style - thriller (film noir), movie has to feature character with name - Kastytis and had to feature prop - chair.",
+        "projectProcess":
+            "     Upon getting the details for the movie - planning process started. Writters worked out the script. Then the story board was created. After that we settled on filming locations and a very tight filming shedule. When work on sets were done, the footage reviews and editing began. Editing were done in batches - Create the rought cut of the scene, synch and clean the sound, do final colour grading. After merging all the scenes in Adobe Premiere pro, we had the finished movie.",
+        "projectResult":
+            "A short thriller movie, and an opportunity to participate in a very fun event.",
+        "projectWork":[
+        "1. Filming with proffessional - industry standart tools.",
+        "2. Editing the raw footage, scene composition in Adobe Premiere pro.",
+        "3. Post production lighting corrections made in Adobe After Effects."],
+        "projectLink":"odiseja72-movie-making-motion-weekend-challenge",
+        "linkToProject":"turbo.video/odiseja72/",
+        "color":"white",
+        "cardImageUrl":"data/img/card-odiseja.jpg"
+    }
+    ]
+}

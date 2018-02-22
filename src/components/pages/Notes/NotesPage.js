@@ -1,22 +1,50 @@
-import Transition from 'react-inline-transition-group';
+import Responsive from 'react-responsive';
 import React from 'react';
-import HeaderComponent from '../../Header/HeaderComponent';
-import FooterComponent from '../../FooterComponent';
-import theme from '../../theme';
 import {posts} from '../../data/notesPosts';
 import NoteCard from './NoteCard';
 
 const style = {
         main:{
-            backgroundColor:'#000a12',
-            color:'white'
+            backgroundColor:'#000a12'
         },
-        cardHolder: {
-            backgroundColor:'#4f5b62',
-            overflowY:'hidden',
-            margin:'20px'
+        card:{
+            marginLeft:'1%',
+            marginTop:'80px',
+            paddingBottom:'50px',
+            columnCount: 4,
+            columnGap: 0,
+            border:'1px solid black'
         }
+    }
+const styleMobile = {
+            main:{
+                backgroundColor:'#000a12'
+            },
+            card:{
+                marginLeft:'1%',
+                marginTop:'80px',
+                paddingBottom:'75px',
+                columnCount: 1,
+                columnGap: 0,
+            }
 }
+
+const styleTablet = {
+    main:{
+        backgroundColor:'#000a12'
+    },
+    card:{
+        marginLeft:'1%',
+        paddingTop:'50px',
+        paddingBottom:'50px',
+        columnCount: 2,
+        columnGap: 0
+    }
+}
+
+const Desktop = props => <Responsive {...props} minWidth={992} />;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
 class NotesPage extends React.Component {
     constructor(props){
@@ -27,8 +55,8 @@ class NotesPage extends React.Component {
     render(){
             return (
                 <div style = {style.main}>
-                    <HeaderComponent title={this.title} />
-                        <div style={style.cardHolder}>
+                    <Desktop>
+                        <div style={style.card}>
                             {posts.map(item => <NoteCard
                                 key = {item.articleId} 
                                 date = {item.articleDate} 
@@ -39,9 +67,37 @@ class NotesPage extends React.Component {
                                 externalLinks = {item.externalLinks}
                                 linkToArticle = {item.linkToArticle}
                                 /> )}
-                        </div>
-                    <FooterComponent />
-                </div>
+                                </div>
+                    </Desktop>
+                    <Tablet>
+                    <div style={styleTablet.card}>
+                        {posts.map(item => <NoteCard
+                            key = {item.articleId} 
+                            date = {item.articleDate} 
+                            title = {item.articleTitle}
+                            description = {item.articleDescription}
+                            articleDescriptionLong = {item.articleDescriptionLong}
+                            articleTldr = {item.articleTldr}
+                            externalLinks = {item.externalLinks}
+                            linkToArticle = {item.linkToArticle}
+                            /> )}
+                            </div>
+                    </Tablet>
+                    <Mobile>
+                    <div style={styleMobile.card}>
+                        {posts.map(item => <NoteCard
+                            key = {item.articleId} 
+                            date = {item.articleDate} 
+                            title = {item.articleTitle}
+                            description = {item.articleDescription}
+                            articleDescriptionLong = {item.articleDescriptionLong}
+                            articleTldr = {item.articleTldr}
+                            externalLinks = {item.externalLinks}
+                            linkToArticle = {item.linkToArticle}
+                            /> )}
+                            </div>
+                    </Mobile>                
+                                </div>
                 );
     }
 

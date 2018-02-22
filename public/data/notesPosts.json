@@ -1,0 +1,96 @@
+{
+  "articles":[
+    {
+      "articleDate":"2017-11-16",
+      "articleTitle":"Top design tips for non designers",
+      "articleSubtitle":"Design is hard, especially if you are on dwelling on technical side of the brain. But we have shortcuts.",
+      "articleContent":{
+          "Introduction":
+              "    So you are a marketer. Creating huge value for big companies. And your boss asks you to write up a proposal. Or maybe to create a presentation? You muster the content, you put it together and... the design looks like shit. You are stressed... (just kidding, you should not stress so easily). The idea for this article came to me, after I got tired, of reviewing my non-designer friends designs for presentations, proposals, etc. In my opinion eveyone working in marketing, should grasp atleast some design basics. So, treat this list as it is. Simple check list for non-designers, to help with their designs.",
+          "Color":
+              "     Some content about colors.",
+          "Type":
+              "     Typography. Why is the type so important?",
+          "Layout":
+              "     Composition, layout, scale, hierarchy",
+          "Conclussion":
+              "     Conclussion stuff"
+                        },
+      "articleTldr":[
+      "1.Shapes/Space",
+      "2.Fonts.",
+      "3.Color.",
+      "4.Tricks."
+                    ],
+    "articleLinks":{
+      "Great short series on design basics - Beginning Graphic Design":"https://www.youtube.com/watch?v=_2LLXnUdUIc",
+      "Help for new designers":"#"
+                   },
+    "articlePermalink":"top_design_tips_for_non_designers"
+      },{
+
+
+      "articleDate":"2017-12-15",
+      "articleTitle":"Animation principles. How to move stuff",
+      "articleSubtitle":"Why your animations look so unnatural, and how to make them better.",
+      "articleContent":{
+        "Introduction":
+            "      None yet.",
+        "Color":
+            "     Some content about colors.",
+        "Type":
+            "     Typography. Why is the type so important?",
+        "Layout":
+            "     Composition, layout, scale, hierarchy",
+        "Conclussion":
+            "     Conclussion stuff"
+                      },
+      "articleTldr":[
+      "1.Ease-in/Ease-out.",
+      "2.Drag.",
+      "3.Squish",
+      "4.Dar kazkas."
+    ],
+    "articleLinks":{
+      "Intro into motion graphics - by TipTup":"https://www.youtube.com/watch?v=HcHq9XjGuzc&t=70s",
+      "Help for new designers":"#"
+                   },
+    "articlePermalink":"animation_principles_for_dummies"
+      },{
+
+
+        "articleDate":"2018-01-10",
+        "articleTitle":"Technical SEO, for non-technical people",
+        "articleSubtitle":"SEO is not that hard, let me help you.",
+        "articleContent":{
+            "as":"      None yet.",
+            "ab":"      None yet."
+        },
+        "articleTldr":[
+          "1.Keyword reasearch",
+          "2.Basics. <meta>, links, titles", 
+          "3.Speed, robots.txt, technical stuff"
+        ],
+        "articleLinks":{
+          "Design resources by Tim Tim":"#",
+          "Help for new designers":"#"},
+          "articlePermalink":"technical_SEO_for_non-technical_people"
+      },{
+      "articleDate":"2018-01-15",
+      "articleTitle":"European Data Protection Directive",
+      "articleSubtitle":"What it all means for web developers",
+      "articleContent":
+      "None yet.",
+      "articleTldr":[
+        "1.Keyword reasearch",
+        "2.Basics. <meta>, links, titles",
+        "3.Speed, robots.txt, technical stuff"
+      ],
+      "articleLinks":{
+      "Design resources by Tim Tim":"#",
+      "Help for new designers":"#"
+                    },
+      "articlePermalink":"european_data_protection_directive_2018"
+    }
+  ]
+}

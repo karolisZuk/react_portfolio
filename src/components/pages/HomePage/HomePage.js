@@ -1,51 +1,156 @@
 import React from 'react';
-import HeaderComponent from '../../Header/HeaderComponent';
+import Responsive from 'react-responsive';
 import CardComponent from './CardComponent';
-import {projects} from '../../data/portfolioPieces';
-import FooterComponent from '../../FooterComponent';
+
 
 const style = {
         main:{
+            paddingTop:'60px',
+            paddingBottom:'60px',
             backgroundColor:'#000a12',
             color:'white',
             fontFamily:'Open Sans, sans-serif',
-            height:'100vh'
-        },
-        appear: {
-            marginLeft:0,
-            transition:'all 700ms ease-out'
-        },
-        cardHolder: {
-            display: 'flex',
-            backgroundColor:'#4f5b62',
-            overflowY:'hidden'
+            columnCount: 3,
+            columnGap:2
         }
 }
+
+const styleMobile = {
+    main:{
+        paddingTop:'30px',
+        paddingBottom:'30px',
+        backgroundColor:'#000a12',
+        color:'white',
+        fontFamily:'Open Sans, sans-serif',
+        columnCount: 1,
+        columnGap:2
+    }
+}
+
+
+const styleTablet = {
+    main:{
+            paddingTop:'60px',
+            paddingBottom:'60px',
+            backgroundColor:'#000a12',
+            color:'white',
+            fontFamily:'Open Sans, sans-serif',
+            columnCount: 2,
+            columnGap:2
+    }
+}
+
+const Desktop = props => <Responsive {...props} minWidth={992} />;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
 class HomePage extends React.Component {
     constructor(props){
         super(props);
         this.title = 'projects';
+        this.projectCount = 8;
+        this.jsonHeader={
+            method: 'get',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json',
+                    }
+        }
+        this.state = {
+            projects:[]
+        }
     }
+
+
+    componentDidMount=()=> {
+        for(let i=0; i<this.projectCount; i++)
+        {
+            this.loadProject(i);
+        }
+      }       
+    
+      loadProject=(projectNumber)=>{
+        fetch('/data/portfolioPieces.json', this.jsonHeader)
+        .then(r=>r.json())
+        .then((data)=> {
+            let projects = this.state.projects.slice()
+            projects.push(data.projects[projectNumber])
+            this.setState({ projects: projects })
+        })
+        .catch((error)=> {
+            console.log(error);
+  });
+      }
+    
 
     render(){
 
     return (
-        <div style={style.main}>
-            <HeaderComponent title={this.title} />
-                <div style={style.cardHolder}>
-                    {projects.map(item => <CardComponent 
-                        key = {item.projectId} 
+        <div>
+            <Desktop>
+                <div style={style.main}>
+                    {this.state.projects.map(item => <CardComponent
+                        key = {item.projectTitle} 
                         type = {item.projectType} 
                         title = {item.projectTitle}
                         description = {item.projectDescription}
-                        projectDescriptionLong = {item.projectDescriptionLong}
+
+                        context = {item.projectContext}
+                        process = {item.projectProcess}
+                        result = {item.projectResult}
+
                         projectWork = {item.projectWork}
                         link = {item.projectLink}
                         linkToProject = {item.linkToProject}
+                        color = {item.color}
+                        caseImages = {item.projectImages}
+                        cardImageUrl = {item.cardImageUrl}
+
                         /> )}
                 </div>
-            <FooterComponent />
+            </Desktop>
+            <Tablet>
+                <div style={styleTablet.main}>
+                    {this.state.projects.map(item => <CardComponent 
+                        key = {item.projectTitle} 
+                        type = {item.projectType} 
+                        title = {item.projectTitle}
+                        description = {item.projectDescription}
+
+                        context = {item.projectContext}
+                        process = {item.projectProcess}
+                        result = {item.projectResult}
+
+                        projectWork = {item.projectWork}
+                        link = {item.projectLink}
+                        linkToProject = {item.linkToProject}
+                        color = {item.color}
+                        cardImageUrl = {item.cardImageUrl}
+                        caseImages = {item.projectImages}
+                        /> )}
+                </div>
+            </Tablet>
+        <Mobile>
+                <div style={styleMobile.main}>
+                {this.state.projects.map(item => <CardComponent 
+                    key = {item.projectTitle} 
+                    type = {item.projectType} 
+                    title = {item.projectTitle}
+                    description = {item.projectDescription}
+
+                    context = {item.projectContext}
+                    process = {item.projectProcess}
+                    result = {item.projectResult}
+
+                    projectWork = {item.projectWork}
+                    link = {item.projectLink}
+                    linkToProject = {item.linkToProject}
+                    color = {item.color}
+                    cardImageUrl = {item.cardImageUrl}
+                    caseImages = {item.projectImages}
+                    /> )}
+                </div>
+        </Mobile>
         </div>
         );
     }

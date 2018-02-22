@@ -8,9 +8,13 @@
     "react-dom": "^16.2.0",
     "react-fontawesome": "^1.6.1",
     "react-inline-transition-group": "^2.1.7",
+    "react-responsive": "^4.0.3",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-transition-group": "^2.2.1"
+    "react-router-transition": "^1.2.0",
+    "react-transition-group": "^2.2.1",
+    "react-validation": "^3.0.7",
+    "validator": "^9.4.1"
   },
   "devDependencies": {
     "eslint": "^4.13.1",
