@@ -85,12 +85,33 @@ class ContactPage extends React.Component {
                 this.setState({stage:this.state.stage-1})
             }
         }
+        this.sendMessage=(event)=>{
+            console.log(event.target.value);
+
+            fetch('https://www.enformed.io/akygwu7z', {
+                method: 'POST',
+                headers:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                },
+                data:JSON.stringify(this.state)
+                })
+                .then(data=>data.json())
+                .then(result=> console.log(result))
+                .catch(err=>console.log(err));
+
+          //  document.getElementById('ghostForm').submit();
+
+            if(this.state.stage >= 1){
+                this.setState({stage:this.state.stage+1})
+            }
+        }
 
         
         this.stage = [
-            <ContactName onChange={this.setName} placeholder={this.state.name} />,
-            <ContactInfo onChange={this.setEmail} placeholder={this.state.email} />,
-            <ContactMessage name={this.state.name} onChange={this.setMessage} placeholder={this.state.message} />,
+            <ContactName onChange={this.setName} placeholder={this.state.name} callback={this.nextStage}/>,
+            <ContactInfo onChange={this.setEmail} placeholder={this.state.email} callfront={this.nextStage} callback={this.previousStage} />,
+            <ContactMessage name={this.state.name} onChange={this.setMessage} placeholder={this.state.message} callfront={this.sendMessage} callback={this.previousStage} />,
             <Send />
         ]
     }
@@ -100,6 +121,11 @@ class ContactPage extends React.Component {
         return (
             <div>
                 <Desktop>
+                <form id='ghostForm' style={style.debug} method='POST' action='https://formspree.io/kar.zukas@gmail.com'>
+                    <input id='ghostName' type="text" value={this.state.name} />
+                    <input id='ghostEmail' type="email"  value={this.state.email} />
+                    <input id='ghostMessage' type="email"  value={this.state.message} />
+                </form>
                     <div style={style.main}>
                         <p>
                         Stage: {this.state.stage}, 

@@ -110,7 +110,6 @@ componentWillReceiveProps(nextProps) {
                                 <div style={style.overlayContent}>
                                 <Link style={style.linkStyle} to = "/" onClick={this.props.closeMenu} >WORK</Link>
                                 <Link style={style.linkStyle} to = "/about" onClick={this.props.closeMenu} >ABOUT</Link>
-                                <Link style={style.linkStyle} to = "/notes" onClick={this.props.closeMenu} >NOTES</Link>
                                 <Link style={style.linkStyle} to = "/contact" onClick={this.props.closeMenu} >CONTACT</Link>
                                 </div>
                         </div>

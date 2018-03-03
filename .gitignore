@@ -9,6 +9,10 @@
 # production
 /build
 
+#private stuff
+/src/components/data
+/public/data
+
 # misc
 .DS_Store
 .env.local

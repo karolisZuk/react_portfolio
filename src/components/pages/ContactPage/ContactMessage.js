@@ -30,7 +30,40 @@ const style = {
             width: '400px',
             outline: 'none',  
             textAlign: 'center'
-          }
+          },
+    button:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            cursor: 'pointer',
+            margin:'30px',
+            paddingRight:'13px',
+            paddingLeft:'13px'
+        },
+        buttonDisabled:{
+            border:'1px solid rgb(23,23,23)',
+            textAlign:'center',
+            left:'5%',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingRight:'13px',
+            paddingLeft:'13px',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            margin:'30px'
+        }
 }
 
 const styleTablet = {
@@ -107,11 +140,39 @@ class ContactMessage extends React.Component {
         super(props);
         this.title = 'contactMessage';
         this.state ={
-            message:''
+            message:'',
+            buttonDisabled:true,
+            btnColor:'black',
+            borderColor:'black'
         }
+
+        this.validate=(txt)=>{
+            //validate string needs changing!!!
+
+            return txt;
+        }
+
         this.handleChange=(event)=>{
-            this.props.onChange(event.target.value);
-            this.setState({message: event.target.value});
+            let validatedString = this.validate(event.target.value);
+            this.props.onChange(validatedString);
+            this.setState({message: validatedString});
+            if(validatedString.length===1){
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'rgb(23,23,23)'})
+                this.setState({borderColor:'rgb(23,23,23)'})
+            }else if(validatedString.length===2){
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'rgb(50,50,50)'})
+                this.setState({borderColor:'rgb(50,50,50)'})
+            }else if(validatedString.length>=3){
+            this.setState({buttonDisabled:false})
+            this.setState({btnColor:'white'})
+            this.setState({borderColor:'white'})
+            }else {
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'black'})
+                this.setState({borderColor:'black'})
+            }
         }
     }
     
@@ -121,33 +182,48 @@ class ContactMessage extends React.Component {
         <div>
         <Desktop>
                 <div style={style.main}>
-                    <h1 style={style.text}> So,{this.props.name} what do you want to tell me?</h1>
-                    <form onSubmit={this.handleSubmit}>
-                        <input style={style.input} type="textfield" value={this.state.message}
+                    <h1 style={style.text}> So, what do you want to tell me?</h1>
+                        <textarea style={style.input} name="message" value={this.state.message}
                         placeholder={this.props.placeholder}
                         onChange={this.handleChange} />
-                  </form>
+                </div>
+                <div>
+                    <button primary style={style.button} onClick={this.props.callback} >  Back </button>
+                    <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                        color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                        onClick={this.props.callfront} 
+                        disabled={this.state.buttonDisabled}> Send </button>
                 </div>
         </Desktop> 
         <Tablet>
             <div style={styleTablet.main}>
-            <h1 style={styleTablet.text}> So,{this.props.name} what do you want to tell me?</h1>
-            <form onSubmit={this.handleSubmit}>
-                <input style={styleTablet.input} type="textfield" value={this.state.message}
+            <h1 style={styleTablet.text}> So, what do you want to tell me?</h1>
+                <textarea style={styleTablet.input} name="message" value={this.state.message}
                 placeholder={this.props.placeholder}
                 onChange={this.handleChange} />
-            </form>
+        </div>
+        <div>
+            <button primary style={style.button} onClick={this.props.callback} >  Back </button>
+            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                onClick={this.props.callfront} 
+                disabled={this.state.buttonDisabled}> Send </button>
         </div>
         </Tablet> 
         <Mobile>
             <div style={styleMobile.main}>
-                <h1 style={styleMobile.text}> So,{this.props.name} what do you want to tell me?</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <input style={styleMobile.input} type="textfield" value={this.state.message}
+                <h1 style={styleMobile.text}> So, what do you want to tell me?</h1>
+                    <input style={styleMobile.input} name="message" value={this.state.message}
                     placeholder={this.props.placeholder}
                     onChange={this.handleChange} />
-                </form>
             </div>
+        <div>
+            <button primary style={style.button} onClick={this.props.callback} >  Back </button>
+            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                onClick={this.props.callfront} 
+                disabled={this.state.buttonDisabled}> Send </button>
+        </div>
         </Mobile> 
         </div>
 

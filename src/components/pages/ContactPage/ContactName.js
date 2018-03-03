@@ -30,7 +30,40 @@ const style = {
             width: '400px',
             outline: 'none',  
             textAlign: 'center'
-          }
+          },
+          button:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            cursor: 'pointer',
+            margin:'30px',
+            paddingRight:'13px',
+            paddingLeft:'13px'
+        },
+        buttonDisabled:{
+            border:'1px solid rgb(23,23,23)',
+            textAlign:'center',
+            left:'5%',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingRight:'13px',
+            paddingLeft:'13px',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            margin:'30px'
+        }
 }
 
 const styleTablet = {
@@ -101,17 +134,49 @@ const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
-
 class ContactName extends React.Component {
     constructor(props){
         super(props);
         this.title = 'contactName';
         this.state ={
-            name:''
+            name:'',
+            buttonDisabled:true,
+            btnColor:'black',
+            borderColor:'black'
         }
+
+        this.validate=(txt)=>{
+            //validate string
+            let outString;
+            const specialChars= "!@#$^&%*()+=-[]\/{}|:<>?,.";
+            for (let i = 0; i < specialChars.length; i++) {
+               outString = txt.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+                }
+            return outString;
+        }
+
+
         this.handleChange=(event)=>{
-            this.props.onChange(event.target.value);
-            this.setState({name: event.target.value});
+            let validatedString = this.validate(event.target.value);
+            this.props.onChange(validatedString);
+            this.setState({name: validatedString});
+            if(validatedString.length===1){
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'rgb(23,23,23)'})
+                this.setState({borderColor:'rgb(23,23,23)'})
+            }else if(validatedString.length===2){
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'rgb(50,50,50)'})
+                this.setState({borderColor:'rgb(50,50,50)'})
+            }else if(validatedString.length>=3){
+            this.setState({buttonDisabled:false})
+            this.setState({btnColor:'white'})
+            this.setState({borderColor:'white'})
+            }else {
+                this.setState({buttonDisabled:true})
+                this.setState({btnColor:'black'})
+                this.setState({borderColor:'black'})
+            }
         }
     }
 
@@ -121,31 +186,44 @@ class ContactName extends React.Component {
         <Desktop>
                 <div style={style.main}>
                     <h1 style={style.text}> Hey, how should I call you?</h1>
-                    <form onSubmit={this.handleSubmit}>
-                        <input style={style.input} type="text" value={this.state.name}
-                        onChange={this.handleChange} placeholder={this.props.placeholder} />
+                        <input style={style.input} 
+                        type="text"
+                        name="name" 
+                        value={this.state.name}
+                        onChange={this.handleChange} 
+                        placeholder={this.props.placeholder} />
                         <span />
-                  </form>
                 </div>
+                <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                                         color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                                onClick={this.props.callback} 
+                                disabled={this.state.buttonDisabled}> forward </button>
+
         </Desktop> 
         <Tablet>
             <div style={styleTablet.main}>
             <h1 style={styleTablet.text}> Hey, how should I call you?</h1>
-            <form onSubmit={this.handleSubmit}>
-                <input style={styleTablet.input} type="text" value={this.state.name}
+                <input style={styleTablet.input} type="text" name="name" value={this.state.name}
                 onChange={this.handleChange} placeholder={this.props.placeholder} />
                 <span />
-            </form>
         </div>
+        <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+            color:this.state.btnColor, borderColor:this.state.borderColor}} 
+        onClick={this.props.callback} 
+        disabled={this.state.buttonDisabled}> forward </button>
+
         </Tablet> 
         <Mobile>
             <div style={styleMobile.main}>
                 <h1 style={styleMobile.text}> Hey, how should I call you?</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <input style={styleMobile.input} type="text" value={this.state.name}
+                    <input style={styleMobile.input} type="text" name="name" value={this.state.name}
                     onChange={this.handleChange} placeholder={this.props.placeholder} />
-                </form>
             </div>
+            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                                         color:this.state.btnColor, borderColor:this.state.borderColor}} 
+            onClick={this.props.callback} 
+            disabled={this.state.buttonDisabled}> forward </button>
+
         </Mobile> 
         </div>
 

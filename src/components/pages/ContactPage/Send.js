@@ -9,9 +9,13 @@ const style = {
                 fontFamily:'Open Sans, sans-serif',
                 letterSpacing:'7px'
             },
-        wrapper:{
-
-        }
+            text:{
+                fontSize:'3.6em',
+                textAlign:'center',
+                textTransform:'uppercase',
+                fontFamily:'Open Sans, sans-serif',
+                letterSpacing:'7px'
+            }
 }
 
 const styleTablet = {
@@ -22,9 +26,13 @@ const styleTablet = {
                 fontFamily:'Open Sans, sans-serif',
                 letterSpacing:'7px'
             },
-        wrapper:{
-
-        }
+        text:{
+                fontSize:'3.6em',
+                textAlign:'center',
+                textTransform:'uppercase',
+                fontFamily:'Open Sans, sans-serif',
+                letterSpacing:'7px'
+                }
 }
 
 const styleMobile = {
@@ -35,9 +43,14 @@ const styleMobile = {
                 fontFamily:'Open Sans, sans-serif',
                 letterSpacing:'7px'
             },
-        wrapper:{
-
+        text:{
+                fontSize:'3em',
+                textAlign:'center',
+                textTransform:'uppercase',
+                fontFamily:'Open Sans, sans-serif',
+                letterSpacing:'3px'
         }
+
 }
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -48,18 +61,17 @@ const Send = () => (
         <div>
         <Desktop>
                 <div style={style.wrapper}>
-                    <p  style={style.main}> Send</p>
+                    <h1  style={style.text}> Your message was sent. Will get back at you soon.</h1>
                 </div>
         </Desktop> 
         <Tablet>
                 <div style={styleTablet.wrapper}>
-                        <p  style={styleTablet.main}> Send</p>
+                        <p  style={styleTablet.text}>Your message was sent. Will get back at you soon.</p>
                 </div>
         </Tablet> 
         <Mobile>
                 <div style={styleMobile.wrapper}>
-                        <p  style={styleMobile.main}> Send</p>
-
+                        <h1  style={styleMobile.text}>Your message was sent. Will get back at you soon.</h1>
                 </div>
         </Mobile> 
         </div>

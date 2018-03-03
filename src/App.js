@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom';
 import { spring, AnimatedSwitch } from 'react-router-transition';
 import HomePage from './components/pages/HomePage/HomePage';
 import AboutPage from './components/pages/About/AboutPage';
-import NotesPage from './components/pages/Notes/NotesPage';
+//import NotesPage from './components/pages/Notes/NotesPage';
 import CaseStudy from './components/pages/CaseStudy/CaseStudy';
-import Article from './components/pages/Notes/Article';
+//import Article from './components/pages/Notes/Article';
 import wrapperStyle from './wrapperStyle.css';
 import Header from './components/Header/HeaderComponent';
 import Footer from './components/FooterComponent';
@@ -56,10 +56,10 @@ const App = () =>
 >
     <Route path="/" exact  component={HomePage} />
     <Route path="/about" exact component={AboutPage} theme={this.theme}/>
-    <Route path="/notes" exact component={NotesPage} />
+
     <Route path="/contact" exact component={ContactPage} />
     <Route path="/projects/:link" exact render={routeProps => <CaseStudy {...routeProps} />} />
-    <Route path="/articles/:link" exact render={routeProps => <Article {...routeProps} />} />
+
 </AnimatedSwitch>
 <Footer />
 </ div>
