@@ -46,7 +46,8 @@ const style = {
             cursor: 'pointer',
             margin:'30px',
             paddingRight:'13px',
-            paddingLeft:'13px'
+            paddingLeft:'13px',
+            marginLeft:'51%'
         },
         buttonDisabled:{
             border:'1px solid rgb(23,23,23)',
@@ -62,7 +63,8 @@ const style = {
             paddingLeft:'13px',
             paddingTop:'4px',
             paddingBottom:'4px',
-            margin:'30px'
+            margin:'30px',
+            marginLeft:'53%'
         }
 }
 
@@ -85,17 +87,52 @@ const styleTablet = {
         color: 'dodgerblue',
         boxSizing: 'border-box',
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2.5em',
+        fontSize: '3em',
         height: '50px',
-        left: '45%',
+        left: '40%',
         margin: '-25px 0 0 -100px',
         padding: '10px 0px',
         position: 'relative',
         top: '50%',
-        width: '300px',
+        width: '400px',
         outline: 'none',  
         textAlign: 'center'
-      }
+      },
+      button:{
+        border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '4px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'1.8em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'3px',
+            paddingBottom:'3px',
+            cursor: 'pointer',
+            margin:'20px',
+            paddingRight:'10px',
+            paddingLeft:'10px',
+            marginLeft:'51%'
+    },
+    buttonDisabled:{
+        border:'1px solid rgb(23,23,23)',
+        textAlign:'center',
+        left:'5%',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '4px',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize:'1.8em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingRight:'10px',
+        paddingLeft:'10px',
+        paddingTop:'3px',
+        paddingBottom:'3px',
+        margin:'20px',
+        marginLeft:'53%'
+    }
 }
 
 const styleMobile = {
@@ -104,11 +141,11 @@ const styleMobile = {
             width:'100%'
         },
     text:{
-        fontSize:'3em',
+        fontSize:'3.6em',
         textAlign:'center',
         textTransform:'uppercase',
         fontFamily:'Open Sans, sans-serif',
-        letterSpacing:'3px'
+        letterSpacing:'7px'
     },
     input: {
         backgroundColor: 'transparent',
@@ -117,17 +154,49 @@ const styleMobile = {
         color: 'dodgerblue',
         boxSizing: 'border-box',
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2em',
-        height: '30px',
-        left: '40%',
-        margin: '-25px 0 0 -100px',
-        padding: '10px 0px',
+        fontSize: '3em',
+        height: '50px',
         position: 'relative',
         top: '50%',
-        width: '300px',
+        width: '100%',
         outline: 'none',  
         textAlign: 'center'
-      }
+      },
+      button:{
+        border:'1px solid white',
+        color:'white',
+        textAlign:'center',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '6px',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize:'2em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingTop:'4px',
+        paddingBottom:'4px',
+        cursor: 'pointer',
+        margin:'30px',
+        paddingRight:'13px',
+        paddingLeft:'13px',
+        marginLeft:'51%'
+    },
+    buttonDisabled:{
+        border:'1px solid rgb(23,23,23)',
+        textAlign:'center',
+        left:'5%',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '6px',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize:'2em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingRight:'13px',
+        paddingLeft:'13px',
+        paddingTop:'4px',
+        paddingBottom:'4px',
+        margin:'30px',
+        marginLeft:'53%'
+    }
 }
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -206,23 +275,22 @@ class ContactName extends React.Component {
                 <input style={styleTablet.input} type="text" name="name" value={this.state.name}
                 onChange={this.handleChange} placeholder={this.props.placeholder} />
                 <span />
-        </div>
-        <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
-            color:this.state.btnColor, borderColor:this.state.borderColor}} 
-        onClick={this.props.callback} 
-        disabled={this.state.buttonDisabled}> forward </button>
-
+                </div>
+                <button primary style={{...this.state.buttonDisabled?styleTablet.buttonDisabled:styleTablet.button, 
+                        color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                        onClick={this.props.callback} 
+                        disabled={this.state.buttonDisabled}> forward </button>
         </Tablet> 
         <Mobile>
             <div style={styleMobile.main}>
                 <h1 style={styleMobile.text}> Hey, how should I call you?</h1>
                     <input style={styleMobile.input} type="text" name="name" value={this.state.name}
                     onChange={this.handleChange} placeholder={this.props.placeholder} />
-            </div>
-            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
-                                         color:this.state.btnColor, borderColor:this.state.borderColor}} 
-            onClick={this.props.callback} 
-            disabled={this.state.buttonDisabled}> forward </button>
+                    </div>
+                    <button primary style={{...this.state.buttonDisabled?styleMobile.buttonDisabled:styleMobile.button, 
+                            color:this.state.btnColor, borderColor:this.state.borderColor}} 
+                            onClick={this.props.callback} 
+                            disabled={this.state.buttonDisabled}> forward </button>
 
         </Mobile> 
         </div>

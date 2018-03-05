@@ -6,8 +6,11 @@ const style = {
                 margin:'0 auto',
                 width:'100%'
             },
+            buttonWrapper:{
+                marginLeft:'40%'
+            },
         text:{
-            fontSize:'3.6em',
+            fontSize:'3.3em',
             textAlign:'center',
             textTransform:'uppercase',
             fontFamily:'Open Sans, sans-serif',
@@ -21,15 +24,17 @@ const style = {
             boxSizing: 'border-box',
             fontFamily: 'Open Sans, sans-serif',
             fontSize: '3em',
-            height: '50px',
-            left: '45%',
+            height: '160px',
+            left: '32%',
             margin: '-25px 0 0 -100px',
             padding: '10px 0px',
+            paddingTop:80,
             position: 'relative',
             top: '50%',
-            width: '400px',
+            width: '700px',
             outline: 'none',  
-            textAlign: 'center'
+            textAlign: 'center',
+            lineHeight: '60px'
           },
     button:{
             border:'1px solid white',
@@ -71,8 +76,81 @@ const styleTablet = {
             margin:'0 auto',
             width:'100%'
         },
+        buttonWrapper:{
+            marginLeft:'25%'
+        },
     text:{
-        fontSize:'3.6em',
+        fontSize:'3.3em',
+        textAlign:'center',
+        textTransform:'uppercase',
+        fontFamily:'Open Sans, sans-serif',
+        letterSpacing:'7px'
+    },
+    input: {
+            backgroundColor: 'transparent',
+            border: 'none',
+            borderBottom: '2px solid #CCC',
+            color: 'dodgerblue',
+            boxSizing: 'border-box',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize: '3em',
+            height: '160px',
+            left: '18%',
+            margin: '-25px 0 0 -100px',
+            padding: '10px 0px',
+            paddingTop:80,
+            position: 'relative',
+            top: '50%',
+            width: '700px',
+            outline: 'none',  
+            textAlign: 'center',
+            lineHeight: '60px'
+      },
+    button:{
+        border:'1px solid white',
+        color:'white',
+        textAlign:'center',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '6px',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize:'2em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingTop:'4px',
+        paddingBottom:'4px',
+        cursor: 'pointer',
+        margin:'30px',
+        paddingRight:'13px',
+        paddingLeft:'13px'
+    },
+    buttonDisabled:{
+        border:'1px solid rgb(23,23,23)',
+        textAlign:'center',
+        left:'5%',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '6px',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize:'2em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingRight:'13px',
+        paddingLeft:'13px',
+        paddingTop:'4px',
+        paddingBottom:'4px',
+        margin:'30px'
+    }
+}
+
+const styleMobile= {
+    main:{
+            margin:'0 auto',
+            width:'100%'
+        },
+        buttonWrapper:{
+            marginLeft:'25%'
+        },
+    text:{
+        fontSize:'3.3em',
         textAlign:'center',
         textTransform:'uppercase',
         fontFamily:'Open Sans, sans-serif',
@@ -85,49 +163,49 @@ const styleTablet = {
         color: 'dodgerblue',
         boxSizing: 'border-box',
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2.2em',
-        height: '50px',
-        left: '38%',
-        margin: '-25px 0 0 -100px',
-        padding: '10px 0px',
+        fontSize: '3em',
+        height: '160px',
+        paddingTop:80,
         position: 'relative',
         top: '50%',
-        width: '400px',
+        width: '100%',
         outline: 'none',  
-        textAlign: 'center'
-      }
-}
-
-const styleMobile = {
-    main:{
-            margin:'0 auto',
-            width:'100%'
-        },
-    text:{
-        fontSize:'3em',
-        textAlign:'center',
-        textTransform:'uppercase',
-        fontFamily:'Open Sans, sans-serif',
-        letterSpacing:'3px'
+        textAlign: 'center',
+        lineHeight: '60px'
+      },
+    button:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '4px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'1.8em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'3px',
+            paddingBottom:'3px',
+            cursor: 'pointer',
+            margin:'20px',
+            paddingRight:'10px',
+            paddingLeft:'10px'
     },
-    input: {
-        backgroundColor: 'transparent',
-        border: 'none',
-        borderBottom: '2px solid #CCC',
-        color: 'dodgerblue',
-        boxSizing: 'border-box',
+    buttonDisabled:{
+        border:'1px solid rgb(23,23,23)',
+        textAlign:'center',
+        left:'5%',
+        backgroundColor: 'rgba(2, 4, 2, 0.1)',
+        letterSpacing: '4px',
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2em',
-        height: '30px',
-        left: '40%',
-        margin: '-25px 0 0 -100px',
-        padding: '10px 0px',
-        position: 'relative',
-        top: '50%',
-        width: '300px',
-        outline: 'none',  
-        textAlign: 'center'
-      }
+        fontSize:'1.8em',
+        borderRadius:'3px',
+        textTransform:'lowercase',
+        paddingRight:'10px',
+        paddingLeft:'10px',
+        paddingTop:'3px',
+        paddingBottom:'3px',
+        margin:'20px'
+    }
 }
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -187,7 +265,7 @@ class ContactMessage extends React.Component {
                         placeholder={this.props.placeholder}
                         onChange={this.handleChange} />
                 </div>
-                <div>
+                <div style={style.buttonWrapper}>
                     <button primary style={style.button} onClick={this.props.callback} >  Back </button>
                     <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
                         color:this.state.btnColor, borderColor:this.state.borderColor}} 
@@ -202,9 +280,9 @@ class ContactMessage extends React.Component {
                 placeholder={this.props.placeholder}
                 onChange={this.handleChange} />
         </div>
-        <div>
+        <div style={styleTablet.buttonWrapper}>
             <button primary style={style.button} onClick={this.props.callback} >  Back </button>
-            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+            <button primary style={{...this.state.buttonDisabled?styleTablet.buttonDisabled:styleTablet.button, 
                 color:this.state.btnColor, borderColor:this.state.borderColor}} 
                 onClick={this.props.callfront} 
                 disabled={this.state.buttonDisabled}> Send </button>
@@ -217,9 +295,9 @@ class ContactMessage extends React.Component {
                     placeholder={this.props.placeholder}
                     onChange={this.handleChange} />
             </div>
-        <div>
-            <button primary style={style.button} onClick={this.props.callback} >  Back </button>
-            <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+        <div style={styleMobile.buttonWrapper}>
+            <button primary style={styleMobile.button} onClick={this.props.callback} >  Back </button>
+            <button primary style={{...this.state.buttonDisabled?styleMobile.buttonDisabled:styleMobile.button, 
                 color:this.state.btnColor, borderColor:this.state.borderColor}} 
                 onClick={this.props.callfront} 
                 disabled={this.state.buttonDisabled}> Send </button>

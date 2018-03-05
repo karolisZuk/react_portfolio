@@ -24,29 +24,48 @@
     "projectImages":["data/img/b-architecture-case1.jpg","data/img/b-architecture-case3.jpg","data/img/b-architecture-case4.jpg"]
     },{
 
-
-    "projectType":"branding-web", 
-    "projectTitle":"Baltas Kadras Webpage",
-    "projectDescription":"Sexy commercial photography is best way to sell any product. Branding helps too",
-
-    "projectContext":
-    "     A professional photographer struggling to attract big commercial photography contracts contacted us for help. Our client had old, working portfolio website, with less than professional looking design. On top of that, there was no identity, branding, or character to shine  against competition. Our client was not doing justice to the pixel-perfect professional photography he was making.",
-    "projectProcess":
-    "    As, with every project, the work started as technical specifications for website functionality and design values. We reviewed old website of our client, and pinpointed the potential bottlenecks for lead generation. Based on results we created the mock-up for the new website.  Finally we started the development. The site itself is running Wordpress, with design tailored for A professional photographer and SEO targeted to lead generation.",
-    "projectResult":
-    "     Professional wordpress website generating massive income. Search engine ranking for our client had drastically increased, generating more clients and profit. Good brand positioning changed the scope of our clients projects.",
-    "projectWork":[
-    "1. Webpage design face lift. Pleasing minimal and modern design - perfect for attracting potential customers.",
-    "2. Branding strategy and customer behavior study, resulting in much bigger project sales. Double the customers and massive revenue boost, because of project scale increase.",
-    "3. Successful internal SEO optimization, skyrocketed the page to the top ranks in a competitive search engine landscape resulting in huge web traffic boost."
-    ],
-    "projectLink":"baltas-kadras-webpage",
-    "linkToProject":"baltaskadras.lt",
-    "color":"black",
-    "cardImageUrl":"data/img/card-baltas-kadras.jpg",
-    "projectImages":["data/img/baltas-case1.jpg", "data/img/baltas-case2.jpg"]
+        "projectType":"design", 
+        "projectTitle":"Proposal design for show business",
+        "projectDescription":"Commercial proposal and google ads design",
+        "projectContext":
+          "     Client - performance art and event organizing company, working in the field for more than 10 years. Over the years the company had bad branding practices, no unified brand style.",
+        "projectProcess":
+          "     The design process started from basic sketches, and looking for the best direction to go with the project. After the initial step we set brand guidelines, fresh logo design, and a vision, to how the brand design should look. Keeping in mind how our design will be consumed (layouts, mobile sizes, user-friendly colors), we created the final design", 
+        "projectResult":
+          "     A stylishly well designed commercial proposal and catalogue. Also well designed supporting google ads banners.",
+        "projectWork":[
+          "1. Study of brand guidelines, brand positioning and values.",
+          "2. Design work for commercial proposal using Adobe inDesign.", 
+          "3. Designing the google ads banners for different screen sizes."],
+        "projectLink":"vp-commercial-proposal-design",
+        "linkToProject":"viduramziai.lt",
+        "color":"white",
+        "cardImageUrl":"./data/img/card-vp-pasiulymas.jpg",
+        "projectImages":["./data/img/vpCase1.jpg","./data/img/vpCase2.jpg"]    
     },{
-
+           
+        "projectType":"web", 
+        "projectTitle":"Antresoles.lt webpage",
+        "projectDescription":"Webpage redesign, doubling the generated leads",
+        "projectContext":
+        "     Client working in loft building industry, struggling to get noticed in his market. Our job was a website redesign and SEO optimization (to put it blunt - generating more customers and doing more sales). Having sales numbers in mind we rolled our sleeves and got to work.",
+        "projectProcess":
+        "The work started with analysis of the competitors and the clients. While doing this, we pinpointed the potential sales bottlenecks. After that, the only thing left to do - building the new website, based on previous data. ",
+        "projectResult":
+          "     New client and up to standard website. Good SEO strategy, which resulted in doubling of sales.",
+        "projectWork":[
+        "1. Study of potencial customers, which led to design guidelines.",
+        "2. Smart search engine optimisation leading in more site visits, which in term led to more sales",
+        "1. Furniture design and 3D visuals for a catalogue. It is way cheaper to design a catalogue with 3D models than to manufacture every product."
+    ],   
+        "projectLink":"antresoles-webpage",
+        "linkToProject":"antresoles.lt",
+        "color":"black",
+        "cardImageUrl":"data/img/card-antresoles.jpg",
+        "projectImages":[
+            "data/img/antresoles-case1.jpg",
+            "data/img/antresoles-case2.jpg"]
+    },{
 
     "projectType":"motion", 
     "projectTitle":"Dream X projection mapping",
@@ -75,32 +94,6 @@
         "data/img/sapnasCase2.jpg"]
     },{
 
-
-
-        "projectType":"web", 
-        "projectTitle":"Antresoles.lt webpage",
-        "projectDescription":"Webpage redesign, doubling the generated leads",
-        "projectContext":
-        "     Client working in loft building industry, struggling to get noticed in his market. Our job was a website redesign and SEO optimization (to put it blunt - generating more customers and doing more sales). Having sales numbers in mind we rolled our sleeves and got to work.",
-        "projectProcess":
-        "The work started with analysis of the competitors and the clients. While doing this, we pinpointed the potential sales bottlenecks. After that, the only thing left to do - building the new website, based on previous data. ",
-        "projectResult":
-          "     New client and up to standard website. Good SEO strategy, which resulted in doubling of sales.",
-        "projectWork":[
-        "1. Study of potencial customers, which led to design guidelines.",
-        "2. Smart search engine optimisation leading in more site visits, which in term led to more sales",
-        "1. Furniture design and 3D visuals for a catalogue. It is way cheaper to design a catalogue with 3D models than to manufacture every product."
-    ],   
-        "projectLink":"antresoles-webpage",
-        "linkToProject":"antresoles.lt",
-        "color":"black",
-        "cardImageUrl":"data/img/card-antresoles.jpg",
-        "projectImages":[
-            "data/img/antresoles-case1.jpg",
-            "data/img/antresoles-case2.jpg"]
-    },{
-
-
         "projectType":"motion", 
         "projectTitle":"Meaco 3D video presentation",
         "projectDescription":"3D modeling and video commercials",
@@ -121,26 +114,6 @@
         "projectImages":["data/img/meacoCase1.jpg","data/img/meacoCase2.jpg"]
     },{
 
-
-        "projectType":"design", 
-        "projectTitle":"Proposal design for show business",
-        "projectDescription":"Commercial proposal and google ads design",
-        "projectContext":
-          "     Client - performance art and event organizing company, working in the field for more than 10 years. Over the years the company had bad branding practices, no unified brand style.",
-        "projectProcess":
-          "     The design process started from basic sketches, and looking for the best direction to go with the project. After the initial step we set brand guidelines, fresh logo design, and a vision, to how the brand design should look. Keeping in mind how our design will be consumed (layouts, mobile sizes, user-friendly colors), we created the final design", 
-        "projectResult":
-          "     A stylishly well designed commercial proposal and catalogue. Also well designed supporting google ads banners.",
-        "projectWork":[
-          "1. Study of brand guidelines, brand positioning and values.",
-          "2. Design work for commercial proposal using Adobe inDesign.", 
-          "3. Designing the google ads banners for different screen sizes."],
-        "projectLink":"vp-commercial-proposal-design",
-        "linkToProject":"viduramziai.lt",
-        "color":"white",
-        "cardImageUrl":"./data/img/card-vp-pasiulymas.jpg",
-        "projectImages":["./data/img/vpCase1.jpg","./data/img/vpCase2.jpg"]    
-    },{
         "projectType":"3D", 
         "projectTitle":"Ceramics visuals 3D renders",
         "projectDescription":"Electrolux conference  gift visuals",
@@ -157,6 +130,29 @@
         "color":"black",
         "cardImageUrl":"data/img/card-electrolux.jpg"
     },{
+
+    "projectType":"branding-web", 
+    "projectTitle":"Baltas Kadras Webpage",
+    "projectDescription":"Sexy commercial photography is best way to sell any product. Branding helps too",
+
+    "projectContext":
+    "     A professional photographer struggling to attract big commercial photography contracts contacted us for help. Our client had old, working portfolio website, with less than professional looking design. On top of that, there was no identity, branding, or character to shine  against competition. Our client was not doing justice to the pixel-perfect professional photography he was making.",
+    "projectProcess":
+    "    As, with every project, the work started as technical specifications for website functionality and design values. We reviewed old website of our client, and pinpointed the potential bottlenecks for lead generation. Based on results we created the mock-up for the new website.  Finally we started the development. The site itself is running Wordpress, with design tailored for A professional photographer and SEO targeted to lead generation.",
+    "projectResult":
+    "     Professional wordpress website generating massive income. Search engine ranking for our client had drastically increased, generating more clients and profit. Good brand positioning changed the scope of our clients projects.",
+    "projectWork":[
+    "1. Webpage design face lift. Pleasing minimal and modern design - perfect for attracting potential customers.",
+    "2. Branding strategy and customer behavior study, resulting in much bigger project sales. Double the customers and massive revenue boost, because of project scale increase.",
+    "3. Successful internal SEO optimization, skyrocketed the page to the top ranks in a competitive search engine landscape resulting in huge web traffic boost."
+    ],
+    "projectLink":"baltas-kadras-webpage",
+    "linkToProject":"baltaskadras.lt",
+    "color":"black",
+    "cardImageUrl":"data/img/card-baltas-kadras.jpg",
+    "projectImages":["data/img/baltas-case1.jpg", "data/img/baltas-case2.jpg"]
+    },{
+
         "projectType":"motion", 
         "projectTitle":"Odisėja 72 challenge",
         "projectDescription":"72 hour movie making challenge",

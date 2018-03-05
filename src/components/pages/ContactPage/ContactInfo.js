@@ -13,6 +13,9 @@ const style = {
         fontFamily:'Open Sans, sans-serif',
         letterSpacing:'7px'
     },
+    buttonWrapper:{
+        marginLeft:'38%'
+    },
     input: {
         backgroundColor: 'transparent',
         border: 'none',
@@ -63,8 +66,26 @@ const style = {
             paddingTop:'4px',
             paddingBottom:'4px',
             margin:'30px'
+        },
+        buttonBack:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            cursor: 'pointer',
+            margin:'30px',
+            paddingRight:'13px',
+            paddingLeft:'13px'
         }
 }
+
 
 const styleTablet = {
     main:{
@@ -78,37 +99,8 @@ const styleTablet = {
         fontFamily:'Open Sans, sans-serif',
         letterSpacing:'7px'
     },
-    input: {
-        backgroundColor: 'transparent',
-        border: 'none',
-        borderBottom: '2px solid #CCC',
-        color: 'dodgerblue',
-        boxSizing: 'border-box',
-        fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2.2em',
-        height: '50px',
-        left: '38%',
-        margin: '-25px 0 0 -100px',
-        padding: '10px 0px',
-        position: 'relative',
-        top: '50%',
-        width: '400px',
-        outline: 'none',  
-        textAlign: 'center'
-      }
-}
-
-const styleMobile = {
-    main:{
-            margin:'0 auto',
-            width:'100%'
-        },
-    text:{
-        fontSize:'3em',
-        textAlign:'center',
-        textTransform:'uppercase',
-        fontFamily:'Open Sans, sans-serif',
-        letterSpacing:'3px'
+    buttonWrapper:{
+        marginLeft:'27%'
     },
     input: {
         backgroundColor: 'transparent',
@@ -117,17 +109,150 @@ const styleMobile = {
         color: 'dodgerblue',
         boxSizing: 'border-box',
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: '2em',
-        height: '30px',
+        fontSize: '3em',
+        height: '50px',
         left: '40%',
         margin: '-25px 0 0 -100px',
         padding: '10px 0px',
         position: 'relative',
         top: '50%',
-        width: '300px',
+        width: '400px',
         outline: 'none',  
         textAlign: 'center'
-      }
+      },
+    button:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            cursor: 'pointer',
+            margin:'30px',
+            paddingRight:'13px',
+            paddingLeft:'13px'
+        },
+        buttonDisabled:{
+            border:'1px solid rgb(23,23,23)',
+            textAlign:'center',
+            left:'5%',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingRight:'13px',
+            paddingLeft:'13px',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            margin:'30px'
+        },
+        buttonBack:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '6px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'2em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'4px',
+            paddingBottom:'4px',
+            cursor: 'pointer',
+            margin:'30px',
+            paddingRight:'13px',
+            paddingLeft:'13px'
+        }
+}
+
+const styleMobile = {
+    main:{
+            margin:'0 auto',
+            width:'100%'
+        },
+    text:{
+        fontSize:'3.6em',
+        textAlign:'center',
+        textTransform:'uppercase',
+        fontFamily:'Open Sans, sans-serif',
+        letterSpacing:'7px'
+    },
+    buttonWrapper:{
+        marginLeft:'20%',
+        width:'100%'
+    },
+    input: {
+        backgroundColor: 'transparent',
+        border: 'none',
+        borderBottom: '2px solid #CCC',
+        color: 'dodgerblue',
+        boxSizing: 'border-box',
+        fontFamily: 'Open Sans, sans-serif',
+        fontSize: '3em',
+        height: '50px',
+        position: 'relative',
+        top: '50%',
+        width: '100%',
+        outline: 'none',  
+        textAlign: 'center'
+      },
+    button:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '4px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'1.8em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'3px',
+            paddingBottom:'3px',
+            cursor: 'pointer',
+            margin:'20px',
+            paddingRight:'10px',
+            paddingLeft:'10px'
+        },
+        buttonDisabled:{
+            border:'1px solid rgb(23,23,23)',
+            textAlign:'center',
+            left:'5%',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '4px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'1.8em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingRight:'10px',
+            paddingLeft:'10px',
+            paddingTop:'3px',
+            paddingBottom:'3px',
+            margin:'20px'
+        },
+        buttonBack:{
+            border:'1px solid white',
+            color:'white',
+            textAlign:'center',
+            backgroundColor: 'rgba(2, 4, 2, 0.1)',
+            letterSpacing: '4px',
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize:'1.8em',
+            borderRadius:'3px',
+            textTransform:'lowercase',
+            paddingTop:'3px',
+            paddingBottom:'3px',
+            cursor: 'pointer',
+            margin:'20px',
+            paddingRight:'10px',
+            paddingLeft:'10px'
+        }
 }
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -197,8 +322,8 @@ class ContactInfo extends React.Component {
                         onChange={this.handleChange} />
                         <span />
                 </div>
-                <div>
-                    <button primary style={style.button} onClick={this.props.callback} >  Back </button>
+                <div style={style.buttonWrapper}>
+                    <button primary style={style.buttonBack} onClick={this.props.callback} >  Back </button>
                     <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
                         color:this.state.btnColor, borderColor:this.state.borderColor}} 
                         onClick={this.props.callfront} 
@@ -212,9 +337,9 @@ class ContactInfo extends React.Component {
                     onChange={this.handleChange} />
                     <span />
             </div>
-            <div>
+            <div style={styleTablet.buttonWrapper}>
                 <button primary style={style.button} onClick={this.props.callback} >  Back </button>
-                <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+                <button primary style={{...this.state.buttonDisabled?styleTablet.buttonDisabled:styleTablet.button, 
                     color:this.state.btnColor, borderColor:this.state.borderColor}} 
                     onClick={this.props.callfront} 
                     disabled={this.state.buttonDisabled}> Forward </button>
@@ -227,9 +352,9 @@ class ContactInfo extends React.Component {
                     onChange={this.handleChange} />
                     <span />
             </div>
-            <div>
-                <button primary style={style.button}  onClick={this.props.callback} >  Back </button>
-                <button primary style={{...this.state.buttonDisabled?style.buttonDisabled:style.button, 
+            <div style={styleMobile.buttonWrapper}>
+                <button primary style={styleMobile.button}  onClick={this.props.callback} >  Back </button>
+                <button primary style={{...this.state.buttonDisabled?styleMobile.buttonDisabled:styleMobile.button, 
                 color:this.state.btnColor, borderColor:this.state.borderColor}} 
                 onClick={this.props.callfront} 
                 disabled={this.state.buttonDisabled}> Forward </button>

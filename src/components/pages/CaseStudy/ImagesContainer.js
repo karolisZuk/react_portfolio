@@ -13,9 +13,8 @@ const style = {
 
 const styleMobile = {
     main: {
-        minWidth: '98%',
-        margin:'5px',
-        height:'100%'
+        minHeight:'100%',
+        margin:'5px'
     }
 }
 

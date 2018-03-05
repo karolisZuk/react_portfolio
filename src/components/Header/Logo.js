@@ -9,33 +9,57 @@ const Mobile = props => <Responsive {...props} maxWidth={767} />;
 const style = {
         logo:{        
                 display:'inline-block',
-                marginTop:'10px',
-                marginBottom:'-9px',
+                marginTop:'20px',
                 paddingRight:'8px',
                 color:'white',
                 fontFamily:'PT Sans Narrow, sans-serif',
-                textDecoration: 'none'
-            }
+                textDecoration: 'none',
+                marginLeft:'10px'
+            },
+        img:{
+                maxWidth:'60px',
+                marginBottom:'-10px'
+        }
 }
+
+const styleTablet = {
+        logo:{        
+                display:'inline-block',
+                marginTop:'20px',
+                paddingRight:'8px',
+                color:'white',
+                fontFamily:'PT Sans Narrow, sans-serif',
+                textDecoration: 'none',
+                marginLeft:'10px'
+            },
+        img:{
+                maxWidth:'60px',
+                marginBottom:'-10px'
+        }
+}
+
 
 const styleMobile = {
         logo:{        
                 display:'inline-block',
-                marginTop:'16px',
-                marginBottom:'-20px',
-                paddingRight:'4px',
+                marginTop:'20px',
+                paddingRight:'8px',
                 color:'white',
                 fontFamily:'PT Sans Narrow, sans-serif',
                 textDecoration: 'none',
-                fontSize:'1.2em'
-            }
+                marginLeft:'10px'
+            },
+        img:{
+                maxWidth:'40px',
+                marginBottom:'-10px'
+        }
 }
 
 const Logo = () => (
         <div>
-        <Desktop><h1 style={style.logo}><Link style={style.logo} to = "/">LOGO</Link></h1></Desktop>
-        <Tablet><h1 style={style.logo}><Link style={style.logo} to = "/">LOGO</Link></h1></Tablet>
-        <Mobile><h1 style={styleMobile.logo}><Link style={style.logo} to = "/">LOGO</Link></h1></Mobile>
+        <Desktop><Link style={style.logo} to = "/"><img src='data/img/logo.png' alt='Karolis Zukas portfolio logo' style={style.img} /></Link></Desktop>
+        <Tablet><Link style={styleTablet.logo} to = "/"><img src='data/img/logo.png' alt='Karolis Zukas portfolio logo' style={styleTablet.img} /></Link></Tablet>
+        <Mobile><Link style={styleMobile.logo} to = "/"><img src='data/img/logo.png' alt='Karolis Zukas portfolio logo' style={styleMobile.img} /></Link></Mobile>
         </div>
 );
 

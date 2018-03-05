@@ -121,55 +121,24 @@ class ContactPage extends React.Component {
         return (
             <div>
                 <Desktop>
-                <form id='ghostForm' style={style.debug} method='POST' action='https://formspree.io/kar.zukas@gmail.com'>
-                    <input id='ghostName' type="text" value={this.state.name} />
-                    <input id='ghostEmail' type="email"  value={this.state.email} />
-                    <input id='ghostMessage' type="email"  value={this.state.message} />
-                </form>
+               
                     <div style={style.main}>
-                        <p>
-                        Stage: {this.state.stage}, 
-                        Email: {this.state.email}, 
-                        Name: {this.state.name},
-                        Message: {this.state.message}
-                        </p><br />
-
                         {this.stage[this.state.stage]}
-
                     </div>
-                    <div style={style.buttonPanel} >
-                        <button primary style={style.button} onClick={this.previousStage}> Previous </button>
-                        <button primary style={style.button} onClick={this.nextStage}> Next </button>
-                    </div>
+                    
                 </Desktop>
                 <Tablet>
                     <div style={styleTablet.main}>
-                        <p>
-                        Stage: {this.state.stage}, 
-                        Email: {this.state.email}, 
-                        Name: {this.state.name},
-                        Message: {this.state.message}
-                        </p><br />
 
                         {this.stage[this.state.stage]}
 
-                    </div>
-                    <div style={style.buttonPanel} >
-                        <button primary style={style.button} onClick={this.previousStage}> Previous </button>
-                        <button primary style={style.button} onClick={this.nextStage}> Next </button>
                     </div>
                 </Tablet>
                 <Mobile>
                     <div style={styleMobile.main}>
-                        <p>Stage: {this.state.stage}, Email: {this.state.email}, Name: {this.state.name},Message: {this.state.message}</p><br />
-
                         {this.stage[this.state.stage]}
 
-                    </div>
-                    <div style={style.buttonPanel} >
-                        <button primary style={style.button} onClick={this.previousStage}> Previous </button>
-                        <button primary style={style.button} onClick={this.nextStage}> Next </button>
-                    </div>     
+                    </div>    
                 </Mobile>
             </div>
         );

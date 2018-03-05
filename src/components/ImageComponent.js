@@ -27,11 +27,10 @@ const styleTablet = {
 const styleMobile = {
     image: {
         maxHeight:'100%',
-        minHeight:'300px',
+        minHeight:'400px',
         position: 'relative',
         backgroundSize: '100%',
-        backgroundRepeat: 'no-repeat',
-        marginBottom:'15px'
+        backgroundRepeat: 'no-repeat'
     }
 }
 
