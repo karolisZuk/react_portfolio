@@ -1,5 +1,6 @@
 import Responsive from 'react-responsive';
 import React from 'react';
+import { spring, AnimatedSwitch } from 'react-router-transition';
 import ContactName from './ContactName';
 import ContactInfo from './ContactInfo';
 import ContactMessage from './ContactMessage';
@@ -7,7 +8,7 @@ import Send from './Send';
 
 const style = {
        main:{
-        marginTop:'60px',
+        marginTop:'200px',
         color:'white',
         overflow:'hidden',
         width: '100vw',
@@ -39,14 +40,14 @@ const style = {
 
 const styleMobile = {
     main:{
-        marginTop:'60px',
+        marginTop:'150px',
         color:'white'
     }
 }
 
 const styleTablet = {
    main:{
-    marginTop:'60px',
+    marginTop:'200px',
     color:'white'
    }
 }
@@ -65,26 +66,13 @@ class ContactPage extends React.Component {
             name: 'Your Name',
             email: 'Your@email.com'
         }
-        this.setName=(e)=>{
-            this.setState({name:e});
-        }
-        this.setMessage=(e)=>{
-            this.setState({message:e});
-        }
-        this.setEmail=(e)=>{
-            this.setState({email:e});
-        }
+        this.setName=(e)=>{this.setState({name:e});}
+        this.setMessage=(e)=>{this.setState({message:e});}
+        this.setEmail=(e)=>{this.setState({email:e});}
 
-        this.nextStage=()=>{
-            if(this.state.stage < 3){
-                this.setState({stage:this.state.stage+1})
-            }
-        }
-        this.previousStage=()=>{
-            if(this.state.stage >= 1){
-                this.setState({stage:this.state.stage-1})
-            }
-        }
+        this.nextStage=()=>{if(this.state.stage < 3){this.setState({stage:this.state.stage+1})} }
+        this.previousStage=()=>{if(this.state.stage >= 1){this.setState({stage:this.state.stage-1})}}
+        
         this.sendMessage=(event)=>{
             console.log(event.target.value);
 
@@ -100,14 +88,11 @@ class ContactPage extends React.Component {
                 .then(result=> console.log(result))
                 .catch(err=>console.log(err));
 
-          //  document.getElementById('ghostForm').submit();
-
             if(this.state.stage >= 1){
                 this.setState({stage:this.state.stage+1})
             }
         }
 
-        
         this.stage = [
             <ContactName onChange={this.setName} placeholder={this.state.name} callback={this.nextStage}/>,
             <ContactInfo onChange={this.setEmail} placeholder={this.state.email} callfront={this.nextStage} callback={this.previousStage} />,
@@ -121,24 +106,13 @@ class ContactPage extends React.Component {
         return (
             <div>
                 <Desktop>
-               
-                    <div style={style.main}>
-                        {this.stage[this.state.stage]}
-                    </div>
-                    
+                    <div style={style.main}>{this.stage[this.state.stage]}</div>
                 </Desktop>
                 <Tablet>
-                    <div style={styleTablet.main}>
-
-                        {this.stage[this.state.stage]}
-
-                    </div>
+                    <div style={styleTablet.main}>{this.stage[this.state.stage]}</div>
                 </Tablet>
                 <Mobile>
-                    <div style={styleMobile.main}>
-                        {this.stage[this.state.stage]}
-
-                    </div>    
+                    <div style={styleMobile.main}>{this.stage[this.state.stage]}</div>    
                 </Mobile>
             </div>
         );

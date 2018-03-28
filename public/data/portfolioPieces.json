@@ -115,6 +115,24 @@
     },{
 
         "projectType":"3D", 
+        "projectTitle":"Interior visualisation",
+        "projectDescription":"3D Visualisations for interior design firm.",
+        "projectContext":
+            "     The project - Photorealistic 3D visualisations of living space. Visualisations were done as first batch from many visualisations of interior design solutions. These visuals were used in web marketing campaingns and marketing proposals.",
+        "projectProcess":
+            "     Starting on this project, I had a base to work on - blueprints of the room, and some simple sketches. I extracted the room dimentions from the blueprint, and then started modeling the furniture. It was fairly easy, straightforward process. After all the 3D modeling was done, the materials, lighting and cameras were set up, and the render process started. Rendering of one image took about 2 hours.",
+        "projectResult":
+            "     Photorealistic 3D visualisations, of interior space. Done with Autodesk 3D Max and VRay.",
+        "projectWork":[
+        "1. Modeling and geometry in Autodesk 3D max.",
+        "2. Lighting, materials and rendering using vRay."],
+        "projectLink":"interior-design-3d-visualisations",
+        "color":"black",
+        "cardImageUrl":"nope",
+        "projectImages":["nope", "nope"]
+        },{
+
+        "projectType":"3D", 
         "projectTitle":"Ceramics visuals 3D renders",
         "projectDescription":"Electrolux conference  gift visuals",
         "projectContext":
@@ -128,7 +146,9 @@
         "2. Lighting, materials and rendering using vRay."],
         "projectLink":"electrolux-conference-present-3d-visuals-made-with-3dmax-vray",
         "color":"black",
-        "cardImageUrl":"data/img/card-electrolux.jpg"
+        "cardImageUrl":"data/img/card-electrolux.jpg",
+        "projectImages":["data/img/card-electrolux.jpg", "data/img/elektrolux-case1.jpg"]
+
     },{
 
     "projectType":"branding-web", 
@@ -164,13 +184,15 @@
         "projectResult":
             "A short thriller movie, and an opportunity to participate in a very fun event.",
         "projectWork":[
-        "1. Filming with proffessional - industry standart tools.",
+        "1. Filming with professional - industry standart tools.",
         "2. Editing the raw footage, scene composition in Adobe Premiere pro.",
         "3. Post production lighting corrections made in Adobe After Effects."],
         "projectLink":"odiseja72-movie-making-motion-weekend-challenge",
         "linkToProject":"turbo.video/odiseja72/",
         "color":"white",
-        "cardImageUrl":"data/img/card-odiseja.jpg"
+        "cardImageUrl":"data/img/card-odiseja.jpg",
+        "projectImages":["data/img/odiseja-case.png", "data/img/odiseja-case2.png", "data/img/odiseja-case1.png"]
+
     }
     ]
 }
